@@ -13,6 +13,9 @@ powered by :
 
 - unzip the file and follow the readme inside
 
+video example :
+<a href="https://user-images.githubusercontent.com/10202690/54074487-33e85280-4293-11e9-9071-4d9b467200e9.gif" target="_blank"><img src="https://user-images.githubusercontent.com/10202690/54074487-33e85280-4293-11e9-9071-4d9b467200e9.gif" alt="alt text" width="300" height="whatever"></a>
+
 ## 2) Build dev env :
 
 - [Download the exemple project from the website of play](https://www.playframework.com/getting-started)
