@@ -1,0 +1,41 @@
+
+https://dzone.com/articles/play-nosql-building-nosql
+https://github.com/knoldus/playing-kundera-cassandra/blob/master/build.sbt
+https://github.com/knoldus/playing-kundera-cassandra
+
+
+CREATE KEYSPACE KunderaExamples
+WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 3};
+
+
+CREATE KEYSPACE EmployeeExample
+WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 3};
+
+
+create column family users with comparator=UTF8Type and default_validation_class=UTF8Type and key_validation_class=UTF8Type
+
+CREATE COLUMNFAMILY users
+(
+  EmpID INT PRIMARY KEY
+  ,EmpFirstName VARCHAR
+  ,EmpLastName VARCHAR
+  ,EmpSalary INT
+);
+
+CREATE COLUMNFAMILY employees
+(
+  EmpID INT PRIMARY KEY
+  ,EmpFirstName VARCHAR
+  ,EmpLastName VARCHAR
+  ,EmpSalary INT
+);
+
+employees
+
+CREATE COLUMNFAMILY tbl_Employee 
+(
+  EmpID INT PRIMARY KEY
+  ,EmpFirstName VARCHAR
+  ,EmpLastName VARCHAR
+  ,EmpSalary INT
+);

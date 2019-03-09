@@ -1,0 +1,21 @@
+
+menubar ul{
+    padding: 0px;
+    margin: 0px;
+    list-style-type:none;
+    background-color:gray;
+}
+menubar li{
+    width:100px;
+    height:80px;
+    border-right:1px solid black;
+    display: inline-block;
+    text-align: center;
+    line-height:80px;
+}
+menubar li a{
+    color:white;
+    text-size:30px;
+    text-decoration:none;
+  
+}

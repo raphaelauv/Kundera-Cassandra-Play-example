@@ -1,0 +1,12 @@
+@(sp: model.SimpleContent)
+@*
+ * Call the `main` template with one arguments. The unique
+ * argument is a `SimpleContent`.
+ *@
+@main("SimpleContent") {
+
+<h1>@sp.title</h1>
+<h2>La page est @sp.permission</h2>
+
+
+}

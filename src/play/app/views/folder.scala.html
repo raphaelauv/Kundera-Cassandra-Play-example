@@ -1,0 +1,14 @@
+@(sp: model.Folder)
+@*
+ * Call the `main` template with one arguments. The unique
+ * argument is a `Folder`.
+ *@
+@main("SimpleContent") {
+
+<h1>@sp.path</h1>
+<h2>Le dossier est @sp.permission</h2>
+<h2> iste des sous-dossier et des fichiers:</h2>
+
+
+}
+

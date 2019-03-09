@@ -1,0 +1,15 @@
+@(message: String,id: Int)
+@main(message) {
+
+<form action = "/qestion/simpleQuestion/giveAnwser" method = "GET">
+  <table>
+    <tr>
+      <td> give your anwser </td>
+      
+      <input type="hidden" name="id" value=@id>
+      <td> <input type="text" name="anwser"/></td>
+      <td> <input type="submit" value="search"> </td>
+    </tr>
+    </form>
+    <h1>@message</h1>
+}

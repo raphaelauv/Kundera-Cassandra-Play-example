@@ -1,0 +1,17 @@
+@(l: Set[_ <: model.PagePooca])
+@*
+ * Call the `main` template with one arguments. The unique
+ * argument is a `Evaluation`.
+ *@
+@main("Evaluation") {
+    <div class="side_menu">
+        <p>Pages</p>
+        <a href="@routes.EvaluationController.addPage()">Add a new Page</a>
+    </div>  
+    <div class="corps">
+        <h2>Page List</h2>
+        @for(w <- l) {
+          <a class="links" href="@routes.EvaluationController.getEvaluation(w.getPageId.toInt)">@w.title</a>
+        }
+    </div>
+}

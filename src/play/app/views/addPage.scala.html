@@ -1,0 +1,24 @@
+@(form: Form[PageForm.PageData])(implicit messages: play.api.i18n.Messages)
+@main("Evaluation") {
+@if(form.hasGlobalErrors) {
+      @form.globalErrors.map { error: FormError =>
+        <div>
+          @error.key: @error.message
+        </div>
+      }
+    }
+
+    
+    @helper.form(routes.EvaluationController.createPage) {
+  @helper.inputText(form("title"),'placeholder -> " page title")
+  @helper.inputRadioGroup(form("permission"),
+  options = Seq("PRIVATE"->"PRIVATE","PUBLIC"->"PUBLIC","RESTRICTED"->"RESTRICTED"),
+          '_label -> "Permission:",
+          '_error -> form("permission").error.map(_.withMessage("select permission"))
+  )
+  <button type="submit">Create page</button>
+}
+
+  
+  
+}

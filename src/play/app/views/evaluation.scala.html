@@ -1,0 +1,20 @@
+@(sp: model.Evaluation,l: Set[_ <: model.ExercicePooca])
+@*
+ * Call the `main` template with one arguments. The unique
+ * argument is a `Evaluation`.
+ *@
+@main("Evaluation") {
+    <div class="side_menu">
+        <p>Exercices</p>
+        @for(w <- l) {
+          <a href="#">@w</a>
+        }
+        <a href="@routes.EvaluationController.addExercice(sp.getPageId.toInt)">Add exercice</a>
+    </div>
+<div class="corps">
+<h1>@sp.title</h1>
+<h1>tailles exo: @l.size<h1>
+</div>
+
+
+}

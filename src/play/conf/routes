@@ -1,0 +1,104 @@
+# Routes
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index
+# An example controller showing how to use dependency injection
+GET     /count                      controllers.CountController.count
+# An example controller showing how to write asynchronous code
+GET     /message                    controllers.AsyncController.message
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset) 
+# Map static resources from the /public folder to the /assets URL path
+GET /assets/*file controllers.Assets.at(path="/public", file)
+
+#########Button redirection########
+
+GET /subscribe  controllers.HomeController.subscribe
+GET /findU controllers.HomeController.findU
+GET /findP controllers.HomeController.findP
+
+################# User Controller###############
+ 
+# Persist Operation  
+
+#GET /persist/:id controllers.MyNormalUserController.persist(id:Int) 
+GET /insert/user/:name/:lastname controllers.NormalUserController.insertNU(name:String,lastname:String) 
+
+GET /insert/admin controllers.AdminUserController.insertAdmin()
+
+
+# Find Operation
+GET /find controllers.NormalUserController.findNU(id:Int)
+
+GET /find/admin/:id controllers.AdminUserController.findAdmin(id:Int)
+
+ 
+# Update Operation
+GET /update/:id controllers.NormalUserController.updateNU(id:Int)
+ 
+# Delete Operation
+#GET /delete controllers.NormalUserController.delete(id:Int = -1)
+GET /delete/:id controllers.NormalUserController.deleteNU(id:Int)
+
+#################### Page Controller ####################
+
+GET /page/insert/simpleContent/:title/:permission controllers.SimpleContentController.insertSimpleContent(title:String,permission:String)
+
+GET /page/delete/simpleContent/:id controllers.SimpleContentController.deleteSimpleContent(id:Int)
+
+#GET /page/add_page/:id_page/:id_page_to_add  controllers.PageController.addPage(id_page:Int,id_page_to_add:Int)
+
+#GET /page/update/:id controllers.PageController.UpdatePage(id:Int)
+
+GET /page/simpleContent/:id controllers.SimpleContentController.getSimpleContent(id:Int)
+
+#GET /page/add_folder/:id_page/:id_folder controllers.PageController.addFolder(id_page:int,id_folder:Int)
+
+GET /page/insert/evaluation/:title/:permission controllers.EvaluationController.insertEvaluation(title:String,permission:String)
+
+GET /page/evaluation/:id controllers.EvaluationController.getEvaluation(id:Int)
+
+GET /page/evaluation/addExercice/:id_page controllers.EvaluationController.addExercice(id_page:Int)
+
+GET /page/insert/evaluation controllers.EvaluationController.addPage()
+
+GET /page/findAll/evaluation controllers.EvaluationController.findAllPage()
+
+POST /evaluation/insert controllers.EvaluationController.createPage()
+
+
+#################### Folder Controller ###################
+
+GET /folder/:id controllers.FolderController.getFolder(id:Int)
+
+#GET /folder/addExercice/:id_folder/:id_ex controllers.FolderController.addExercice(id_folder:Int,id_ex:Int)
+
+#GET /folder/update/:id controllers.FolderController.updateFolder(id:Int)
+
+GET /folder/insert/:path/:permission controllers.FolderController.insertFolder(path:String,permission:String)
+
+GET /folder/delete/:id_folder controllers.FolderController.deleteFolder(id_folder:Int)
+
+##################### Question Controller ###################
+
+#GET /question/simpleQuestion/insert/simple/:id/:title/:anwser controllers.SimpleQuestionController.insertSimpleQuestion(id:Int,title:String,anwser:Int) 
+
+#GET /question/simpleQuestion/find/simple/:id controllers.SimpleQuestionController.findSimpleQuestion(id:Int)
+
+#GET /qestion/simpleQuestion/getQestion/:id controllers.SimpleQuestionController.getQestion(id:Int)
+
+#GET /qestion/simpleQuestion/giveAnwser/:response controllers.SimpleQuestionController.giveAnwser(response: String)
+
+##################### Exercice Controller ###################
+
+#GET /exercice/:id  controllers.ExerciceControllers.getExercice(id:Int) 
+
+#GET /exercice/delete/:id controllers.ExerciceControllers.deleteExercice(id:Int)
+
+#GET /exercice/update/:id controllers.ExerciceControllers.updateExercice(id:Int)
+
+#GET /exercice/addQuestion/:id_ex/:ques/:rep controllers.ExerciceControllers.addQuestion(id_ex:int,ques:String,rep:String)
+
+#GET /exercice/practice/:id controllers.ExerciceControllers.practice(id:Int)
+
