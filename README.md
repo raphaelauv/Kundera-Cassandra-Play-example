@@ -22,10 +22,10 @@ video example :
 - [Download the exemple project from the website of play](https://www.playframework.com/getting-started)
 - Insert/replace all the files inside the folder src/play in the exemple project folder
 
-- Follow the instruction inside the fodler doc to installe the database : [HOW_TO_Framwork_KUNDURA.md](./documentation/HOW_TO_Framwork_KUNDURA.md)
+- Follow the instruction inside documentation to instal the database : [HOW_TO_Framwork_KUNDURA.md](./documentation/HOW_TO_Framwork_KUNDURA.md)
 
 - Launch cassandra database
-- go inside the foder of the exemple project downloaded beofre
+- go inside the folder of the exemple project downloaded beofre
 - Launch : sbt run
 
 the website is accesible by : [localhost:9000](http://localhost:9000)
