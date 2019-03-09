@@ -22,7 +22,7 @@ video example :
 - [Download the exemple project from the website of play](https://www.playframework.com/getting-started)
 - Insert/replace all the files inside the folder src/play in the exemple project folder
 
-- Follow the instruction inside the fodler doc to installe the database : Utiliser_Framwork_KUNDURA.md
+- Follow the instruction inside the fodler doc to installe the database : [HOW_TO_Framwork_KUNDURA.md](./documentation/HOW_TO_Framwork_KUNDURA.md)
 
 - Launch cassandra database
 - go inside the foder of the exemple project downloaded beofre
